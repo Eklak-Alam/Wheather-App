@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <div class="card">
+        <h1>Wheather App</h1>
+        <input type="text" id="input" placeholder="Enter name">
+        <button id="button">Search</button>
+        <div class="showHide">
+            <div class="showErrorMessage">Nothing Happen! <br>Pls Check your spelling</div>
+        <div class="showImage">
+            <img id="wheatherImage" src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" alt="">
+        </div>
+        <h2 id="showTemp"></h2>
+        <h2 id="cityName">New York</h2>
+        <div class="humidityWind">
+            <div class="humidity">
+                <div class="humidityimg">
+                    <img id="humidityImage" src="https://cdn-icons-png.flaticon.com/512/1574/1574227.png" alt="">
+                </div>
+                <div class="humidityDetails">
+                <p id="humidityPercent">48%</p>
+                <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <div class="windimg">
+                    <img id="" src="https://www.pngall.com/wp-content/uploads/5/Wind-PNG.png" alt="">
+                </div>
+                <div class="windDetails">
+                    <p id="windPercent"></p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

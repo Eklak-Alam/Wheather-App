@@ -1,0 +1,171 @@
+/* Reset padding and margin, and set box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure full height and width for html and body */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Center main content */
+main {
+    background: linear-gradient(68deg, rgb(31, 31, 255), white);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 1em; /* Add some padding */
+}
+
+/* Card styling */
+.card {
+    border-radius: 1em; /* More rounded corners */
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+    background-image: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722375/night.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Heading inside card */
+.card h1 {
+    font-size: 2.2em; /* Responsive font size */
+    font-weight: bold;
+    margin-bottom: 1em; /* Add space below heading */
+}
+
+/* Input inside card */
+.card input {
+    padding: 0.8em;
+    border: none;
+    width: calc(100% - 2em); /* Full width with padding adjustment */
+    max-width: 400px; /* Max width for large screens */
+    outline: none;
+    font-size: 1em; /* Responsive font size */
+    margin-top: 1em;
+    border-radius: 5px;
+}
+
+/* Button inside card */
+.card button {
+    border: none;
+    outline: none;
+    width: calc(100% - 2em); /* Full width with padding adjustment */
+    max-width: 200px; /* Max width for larger screens */
+    padding: 0.8em;
+    margin-top: 1em;
+    font-size: 1em; /* Responsive font size */
+    border-radius: 5px;
+    background-color: #007bff; /* Example background color */
+    color: white; /* Text color */
+}
+
+/* Image in .showImage */
+.showImage img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%; /* Full width */
+    max-width: 200px; /* Max width for larger screens */
+}
+
+/* Temperature and city name styling */
+#showTemp {
+    font-size: 2em; /* Responsive font size */
+}
+
+#cityName {
+    font-size: 2em; /* Responsive font size */
+}
+
+/* Flex containers for humidity and wind */
+.humidityWind {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items if needed */
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+
+/* Humidity container styling */
+.humidity, .wind {
+    display: flex;
+    align-items: center; /* Align items center */
+    flex: 1 1 45%; /* Responsive flex item sizing */
+    margin-bottom: 1em;
+    max-width: 100%; /* Ensure containers don’t exceed width */
+}
+
+.humidityimg img, .windimg img {
+    width: 100%; /* Full width of container */
+    max-width: 80px; /* Max width for smaller screens */
+        /* Maintain aspect ratio */
+}
+
+/* Responsive sizing for larger screens */
+@media (min-width: 768px) {
+    .humidityimg img, .windimg img {
+        max-width: 50px; /* Larger max width for larger screens */
+    }
+}
+
+/* Show/Hide elements */
+.showHide {
+    display: none;
+}
+
+/* Error message styling */
+.showErrorMessage {
+    display: none;
+    text-align: start;
+    font-weight: bold;
+    font-size: 1em; /* Responsive font size */
+    color: black;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 1.5em; /* Adjust padding */
+    }
+
+    .card input, .card button {
+        width: 100%;
+        max-width: none;
+    }
+
+    .humidity, .wind {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: flex-start;
+    }
+
+    .humidityimg img, .windimg img {
+        max-width: 40px; /* Smaller images for smaller screens */
+    }
+
+    #showTemp, #cityName {
+        font-size: 1.8em; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card h1 {
+        font-size: 1.8em; /* Smaller font size */
+    }
+
+    #showTemp, #cityName {
+        font-size: 1.5em; /* Smaller font size */
+    }
+
+    .humidityDetails, .windDetails {
+        font-size: 0.9em; /* Smaller font size */
+    }
+}
